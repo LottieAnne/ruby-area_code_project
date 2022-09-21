@@ -11,9 +11,16 @@ dial_book = {
     "lancaster" => "717"
 }
 
+def get_city_names(somehash)
+    somehash.keys
+end
 
 loop do
     puts "Do you want to look up an area code based on a city name?(Y/N)"
     answer = gets.chomp.downcase
     break if answer != "y"
+    puts "Which city do you want to look up the areacode for?"
+    puts get_city_names(dial_book)
+    puts "Enter your selection"
+    print "Cityname: "
 end
